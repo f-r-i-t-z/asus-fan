@@ -737,7 +737,7 @@ static ssize_t temp1_input(struct device *dev, struct device_attribute *attr,
   dbg_msg("temp-id: 1 | get (acpi eval)");
 
   // acpi call
-  ret = acpi_evaluate_integer(NULL, "\\_SB.PCI0.LPCB.EC0.TH1R", NULL, &value);
+  ret = acpi_evaluate_integer(NULL, "\\_SB.PCI0.LPCB.EC0.TH1L", NULL, &value);
   if (ret != AE_OK) {
     err_msg("read_temp", "failed reading temperature, errcode: %s",
      acpi_format_exception(ret));
