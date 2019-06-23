@@ -1,7 +1,7 @@
 KVERSION ?= $(shell uname -r)
 KDIR ?= /lib/modules/$(KVERSION)/build
 
-CFLAGS_asus_fan.o += -Wno-format -Wno-format-extra-args
+CFLAGS_asus_fan.o += -Wno-format -Wno-format-extra-args -DDEBUG
 
 ifeq ($(DEBUG), 1)
     CFLAGS_asus_fan.o += -DDEBUG 
